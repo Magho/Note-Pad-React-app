@@ -1,22 +1,58 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Grid from './components/Grid';
+import Form from './components/Form';
 
-const user = {
-  name : 'Magho',
-};
+class App extends React.Component {
 
-class App extends Component {
+  constructor(props) {
+      super(props);
+      this.state = ({
+          notes : [
+              {
+                  id : 1,
+                  title : "add course notes1",
+                  details : "note 1",
+              },
+              {
+                  id : 2,
+                  title : "add course notes2",
+                  details : "note 2",
+              },
+              {
+                  id : 3,
+                  title : "add course notes3",
+                  details : "note 3",
+              }
+          ],
+          name           : 'Magho',
+          currentTitle   : '',
+          currentDetails : '',
+      });
+  }
+
+  handleChange (e) {
+      const name = e.target.name;
+      const value = e.target.value;
+
+      this.setState({
+         [name] : value,
+      });
+  }
+
+  handleSubmit (e) {
+      alert(`Your note ${this.state.currentTitle} has been added`);
+      e.preventDefault();
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <Header name={this.state.name}/>
+          <Form currentTitle={this.state.currentTitle} currentDetails={this.state.currentDetails}
+          handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+          <Grid notes={this.state.notes}/>
       </div>
     );
   }
