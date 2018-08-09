@@ -8,11 +8,11 @@ export default class Form extends React.Component {
                 <div className="row">
                     <div className="input-field col s3">
                         <input type="text" name="currentTitle" value={this.props.currentTitle}
-                               onChange={this.props.handleChange.bind(this)}/>
+                               onChange={this.props.handleChange}/>
                     </div>
                     <div className="input-field col s7">
                         <input type="text" name="currentDetails" value={this.props.currentDetails}
-                               onChange={this.props.handleChange.bind(this)}/>
+                               onChange={this.props.handleChange}/>
                     </div>
                     <div className="input-field col s2">
                         <button className="btn-large waves-effect waves-light" type={"submit"} name={"action"}>
