@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Header from './components/Header';
 import Grid from './components/Grid';
 import Form from './components/Form';
@@ -27,8 +26,8 @@ class App extends React.Component {
               }
           ],
           name           : 'Magho',
-          currentTitle   : '',
-          currentDetails : '',
+          currentTitle   : 'mmm',
+          currentDetails : 'mmm',
       });
   }
 

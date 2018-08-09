@@ -2,17 +2,17 @@ import React from 'react';
 
 export default class Form extends React.Component {
 
-    handleChange (e) {
-        this.props.handleChange(e)
+    handleChange (event) {
+        this.props.handleChange(event)
     }
 
-    handleSubmit (e) {
-        this.props.handleSubmit(e);
+    handleSubmit (event) {
+        this.props.handleSubmit(event);
     }
 
     render () {
        return (
-            <form onSubmit={this.handleSubmit()}>
+            <form onSubmit={this.props.handleSubmit}>
                 <label> tile :
                     <input type="text" name="currentTitle" value={this.props.currentTitle}
                            onChange={this.props.handleChange}/>
