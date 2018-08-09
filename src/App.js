@@ -31,12 +31,12 @@ class App extends React.Component {
       });
   }
 
-  handleChange (e) {
-      const name = e.target.name;
-      const value = e.target.value;
+  handleChange (event) {
+      const name = event.target.name;
+      const value = event.target.value;
 
       this.setState({
-         [name] : value,
+         [name] : value
       });
   }
 
@@ -50,7 +50,7 @@ class App extends React.Component {
       <div className="App">
           <Header name={this.state.name}/>
           <Form currentTitle={this.state.currentTitle} currentDetails={this.state.currentDetails}
-          handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                handleChange={this.handleChange.bind(this)} handleSubmit={this.handleSubmit.bind(this)}/>
           <Grid notes={this.state.notes}/>
       </div>
     );

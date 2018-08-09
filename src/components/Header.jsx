@@ -2,9 +2,13 @@ import React from 'react';
 
 const Header = (props) => {
     return (
-        <header className="App-header">
-            <h1 className="App-title"> {props.name}, notepad</h1>
-        </header>
+        <div className="navbar-fixed">
+            <nav className="teal lighten-2">
+                <div className="nav-wrapper">
+                    <div className="brand-logo center"> {props.name}, notepad</div>
+                </div>
+            </nav>
+        </div>
     );
 };
 

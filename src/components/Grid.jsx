@@ -11,10 +11,11 @@ export default class Grid extends React.Component {
 
     render () {
         return (
-            <div>
-                {this.renderItems()}
+            <div className="row">
+                <ul>
+                    {this.renderItems()}
+                </ul>
             </div>
-
         );
     }
 }
