@@ -3,7 +3,7 @@ This app is a simple Note app, used to take notes, made for learning purpose.
 
 ## Screenshots
 
-<img src="https://github.com/Magho/weather-app-/blob/master/screenshots%20%26%20records/1.png" height="500" width="500"> ![Alt Text](https://github.com/Magho/weather-app-/blob/master/screenshots%20%26%20records/Peek%202018-08-28%2011-17.gif)
+<img src="https://github.com/Magho/Note-Pad-React-app/blob/master/images/1.png" height="500" width="500"> ![Alt Text](https://github.com/Magho/Note-Pad-React-app/blob/master/images/Peek%202018-08-29%2000-01.gif)
 
 
 ## techonologies used
